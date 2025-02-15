@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="app-header">
         <h1>GAP Planner</h1>
-        
+        <div class="header-controls">
+            <button id="darkModeToggle" class="icon-btn">
+                🌙 Dark Mode
+            </button>
+            <button onclick="StorageManager.backup()" class="icon-btn">
+                💾 Backup
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="goals-container">
             <div class="goal-section">
                 <div class="card">
@@ -22,6 +32,9 @@
                     <div class="goal-input">
                         <input type="text" id="weeklyGoal1" placeholder="Enter your first goal">
                         <button id="completeGoalBtn1" class="done-btn">Done</button>
+                    </div>
+                    <div class="goal-notes">
+                        <textarea id="goalNotes1" placeholder="Add notes for this goal..." rows="3"></textarea>
                     </div>
                 </div>
 
@@ -49,6 +62,9 @@
                         <input type="text" id="weeklyGoal2" placeholder="Enter your second goal">
                         <button id="completeGoalBtn2" class="done-btn">Done</button>
                     </div>
+                    <div class="goal-notes">
+                        <textarea id="goalNotes2" placeholder="Add notes for this goal..." rows="3"></textarea>
+                    </div>
                 </div>
 
                 <div class="card">
@@ -66,6 +82,21 @@
                         <input type="text" id="timeBlock2" placeholder="e.g., Fri 9a">
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="statistics-bar">
+            <div class="stat-item">
+                <span class="stat-label">Goals Completed</span>
+                <span id="totalGoalsCompleted" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Actions Completed</span>
+                <span id="totalActionsCompleted" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Completion Rate</span>
+                <span id="completionRate" class="stat-value">0%</span>
             </div>
         </div>
 
