@@ -351,6 +351,15 @@ document.getElementById('newAction2').addEventListener('keypress', function(e) {
     }
 });
 
+// Add event listeners for Done buttons
+document.getElementById('completeGoalBtn1').addEventListener('click', function() {
+    completeCurrentGoal(1);
+});
+
+document.getElementById('completeGoalBtn2').addEventListener('click', function() {
+    completeCurrentGoal(2);
+});
+
 // Add save handlers for goals and time blocks
 document.getElementById('weeklyGoal1').addEventListener('input', saveToLocalStorage);
 document.getElementById('weeklyGoal2').addEventListener('input', saveToLocalStorage);
