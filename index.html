@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAP Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GAP Planner</h1>
+        
+        <div class="goals-container">
+            <div class="goal-section">
+                <div class="card">
+                    <h2>Goal #1</h2>
+                    <div class="goal-input">
+                        <input type="text" id="weeklyGoal1" placeholder="Enter your first goal">
+                        <button id="completeGoalBtn1" class="done-btn">Done</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Actions</h2>
+                    <div class="action-input">
+                        <input type="text" id="newAction1" placeholder="New action item">
+                        <button onclick="addAction(1)" class="add-btn">Add</button>
+                    </div>
+                    <ul id="actionsList1"></ul>
+                </div>
+
+                <div class="card time-card">
+                    <h2>Protect Time</h2>
+                    <div class="action-input">
+                        <input type="text" id="timeBlock1" placeholder="e.g., Mon 12p">
+                    </div>
+                </div>
+            </div>
+
+            <div class="goal-section">
+                <div class="card">
+                    <h2>Goal #2</h2>
+                    <div class="goal-input">
+                        <input type="text" id="weeklyGoal2" placeholder="Enter your second goal">
+                        <button id="completeGoalBtn2" class="done-btn">Done</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Actions</h2>
+                    <div class="action-input">
+                        <input type="text" id="newAction2" placeholder="New action item">
+                        <button onclick="addAction(2)" class="add-btn">Add</button>
+                    </div>
+                    <ul id="actionsList2"></ul>
+                </div>
+
+                <div class="card time-card">
+                    <h2>Protect Time</h2>
+                    <div class="action-input">
+                        <input type="text" id="timeBlock2" placeholder="e.g., Fri 9a">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card archive-card">
+            <h2>Archive</h2>
+            <div id="archivedGoals" class="archived-goals">
+                <!-- Archived goals will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
